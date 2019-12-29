@@ -1,0 +1,19 @@
+{
+  "name": "package-json-updated-action",
+  "version": "0.1.0",
+  "description": "A GitHub Action which indicates when the package.json version has updated in the most recent commit",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "GitHub-Action",
+    "package.json",
+    "npm",
+    "versioning"
+  ],
+  "author": "Monty Dawson <hello@montydawson.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^2.0.0"
+  }
+}

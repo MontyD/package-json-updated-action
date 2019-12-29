@@ -1,0 +1,8 @@
+name: 'Package Version Updated'
+description: 'Indicates when the package.json version has updated in the most recent commit'
+outputs:
+  has-updated:
+    description: 'Whether the package.json version has been updated'
+runs:
+  using: 'node12'
+  main: 'index.js'
