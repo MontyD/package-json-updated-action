@@ -1,4 +1,4 @@
-const { setOutput, getInput, setFailed } = require('@actions/core');
+const { setOutput, setFailed } = require('@actions/core');
 const { GitHub, context } = require('@actions/github');
 
 const getPackageJson = async (ref, octokit) => {
@@ -14,7 +14,7 @@ const getPackageJson = async (ref, octokit) => {
 };
 
 const run = async () => {
-    const token = getInput('GITHUB_TOKEN');
+    const token = process.env['GITHUB_TOKEN'];
     if (!token) {
         throw new Error('GITHUB_TOKEN not provided');
     }
