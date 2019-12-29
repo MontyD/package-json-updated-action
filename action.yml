@@ -4,8 +4,10 @@ branding:
     icon: 'arrow-up'
     color: 'yellow'
 outputs:
-  has-updated:
-    description: 'Whether the package.json version has been updated'
+    has-updated:
+        description: 'Whether the package.json version has been updated'
+    current-package-version:
+        description: 'The current package.json version'
 runs:
-  using: 'node12'
-  main: 'index.js'
+    using: 'node12'
+    main: 'index.js'

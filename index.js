@@ -26,14 +26,15 @@ const run = async () => {
         ref: currentRef,
     })).data.parents[0] || {}).sha;
 
+    const currentPackageJSON = await getPackageJson(currentRef, octokit);
+    setOutput('current-package-version', currentPackageJSON.version);
+
     if (!previousRef) {
         setOutput('has-updated', true);
         return;
     }
 
-    const currentPackageJSON = await getPackageJson(currentRef, octokit);
     const previousPackageJSON = await getPackageJson(previousRef, octokit);
-
     setOutput('has-updated', currentPackageJSON.version !== previousPackageJSON.version);
 }
 

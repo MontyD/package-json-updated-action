@@ -1,6 +1,6 @@
 {
   "name": "package-json-updated-action",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A GitHub Action which indicates when the package.json version has updated in the most recent commit",
   "main": "index.js",
   "scripts": {},
