@@ -1,5 +1,8 @@
 name: 'Package Version Updated'
 description: 'Indicates when the package.json version has updated in the most recent commit'
+branding:
+    icon: 'arrow-up'
+    color: 'yellow'
 outputs:
   has-updated:
     description: 'Whether the package.json version has been updated'
