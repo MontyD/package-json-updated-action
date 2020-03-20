@@ -2,6 +2,12 @@
 
 This action outputs a variable 'has-updated' indicating that the package.json version was updated in the most recent commit.
 
+## Inputs
+
+### `path`
+
+Sets the path to the package.json. Default 'package.json'.
+
 ## Outputs
 
 ### `has-updated`
@@ -21,6 +27,8 @@ jobs:
     steps:
     - uses: MontyD/package-json-updated-action
       id: version-updated
+      with:
+        path: package.json
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v1

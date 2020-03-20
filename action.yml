@@ -3,6 +3,11 @@ description: 'Indicates when the package.json version has updated in the most re
 branding:
     icon: 'arrow-up'
     color: 'yellow'
+inputs:
+    path:
+        description: 'The path to the package.json'
+        required: false
+        default: 'package.json'
 outputs:
     has-updated:
         description: 'Whether the package.json version has been updated'
