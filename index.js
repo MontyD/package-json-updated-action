@@ -4,7 +4,7 @@ const { GitHub, context } = require('@actions/github');
 const getPackageJson = async (ref, octokit) => {
     const packageJSONData = (await octokit.repos.getContents({
         ...context.repo,
-        path: 'package.json',
+        path: process.env['INPUT_PATH'] || 'package.json',
         ref,
     })).data.content;
     if (!packageJSONData) {
