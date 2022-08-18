@@ -13,7 +13,7 @@
   "author": "Monty Dawson <hello@montydawson.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^2.0.0"
   }
 }
